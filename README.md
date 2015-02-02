@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hwasungmars/qi.svg)](https://travis-ci.org/hwasungmars/qi)
+
 # Quite Interesting
 
 Collection of Quite Interesting questions.
