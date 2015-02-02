@@ -1,14 +1,14 @@
-# qi
+# Quite Interesting
 
-A Clojure library designed to ... well, that part is up to you.
+Collection of Quite Interesting questions.
 
-## Usage
+## Test
 
-FIXME
+To run Java tests:
 
-## License
+`lein junit`
 
-Copyright © 2015 FIXME
+To run Clojure tests:
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+`lein test`
+
