@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hwasungmars/qi.svg)](https://travis-ci.org/hwasungmars/qi)
+
 # qi
 
 A Clojure library designed to ... well, that part is up to you.
