@@ -1,6 +1,7 @@
 *.class
 *.iml
 *.jar
+*.swp
 .hg/
 .hgignore
 .idea/
@@ -8,4 +9,4 @@
 /.nrepl-port
 /checkouts
 /classes
-/target
+target/
