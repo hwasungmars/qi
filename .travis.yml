@@ -1,2 +1,2 @@
-language: clojure java
-script: make clean test
+language: clojure
+# script: make clean test
