@@ -6,11 +6,15 @@ Collection of Quite Interesting questions.
 
 ## Test
 
-To run Java tests:
+To run all tests:
 
-`lein junit`
+`make test`
 
-To run Clojure tests:
+To run only Java tests go to the `java` subfolder and do:
+
+`mvn test`
+
+To run only Clojure tests go to the `clojure` subfolder and do:
 
 `lein test`
 
