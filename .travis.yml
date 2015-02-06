@@ -1,2 +1,2 @@
-language: clojure
-# script: make clean test
+install: lein mvn
+script: make clean test
