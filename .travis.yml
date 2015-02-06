@@ -1,4 +1,6 @@
-install: lein mvn
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install leiningen maven
 script: make clean test
 notifications:
   email:
