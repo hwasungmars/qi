@@ -1,2 +1,2 @@
-language: clojure
-script: lein test && lein junit
+language: clojure java
+script: make clean test
