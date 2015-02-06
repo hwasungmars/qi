@@ -8,7 +8,7 @@ before_install:
 
 before_script: make clean
 
-script: make $TEST_SUITE
+script: make "${TEST_SUITE}"
 
 notifications:
   email:
