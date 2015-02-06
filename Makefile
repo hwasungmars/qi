@@ -1,7 +1,11 @@
-.PHONY: test clean symlink
+.PHONY: test test-clojure test-java clean symlink
 
-test:
+test: test-clojure test-java
+
+test-clojure:
 	cd clojure && lein test
+
+test-java:
 	cd java && mvn test
 
 clean:

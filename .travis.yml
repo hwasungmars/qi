@@ -1,7 +1,15 @@
+env:
+  - TEST_SUITE=test-clojure
+  - TEST_SUITE=test-java
+
 before_install:
   - sudo apt-get update
   - sudo apt-get install leiningen maven
-script: make clean test
+
+before_script: make clean
+
+script: make $TEST_SUITE
+
 notifications:
   email:
     - hwasung.lee@oriel.oxon.org
