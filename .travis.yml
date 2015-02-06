@@ -1,2 +1,6 @@
 install: lein mvn
 script: make clean test
+notifications:
+  email:
+    - hwasung.lee@oriel.oxon.org
+    - melanierod@gmail.com
