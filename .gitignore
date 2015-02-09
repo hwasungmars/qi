@@ -6,6 +6,7 @@
 .hgignore
 .idea/
 .lein-failures
+.lein-repl-history
 /.lein-*
 /.nrepl-port
 /checkouts
