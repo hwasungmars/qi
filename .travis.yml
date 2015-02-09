@@ -1,3 +1,6 @@
+jdk:
+  - oraclejdk8
+
 env:
   - TEST_SUITE=test-clojure
   - TEST_SUITE=test-java
