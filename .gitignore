@@ -1,11 +1,13 @@
 *.class
 *.iml
 *.jar
+*.swp
 .hg/
 .hgignore
 .idea/
+.lein-failures
 /.lein-*
 /.nrepl-port
 /checkouts
 /classes
-/target
+target/
