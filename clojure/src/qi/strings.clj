@@ -10,3 +10,16 @@
             :else (short-sighted-iterator (first incoming) (rest incoming)))))
   (let [sorted (sort string)]
     (short-sighted-iterator nil sorted)))
+
+(defn reverse-c
+  "Reverse C-style strings.
+
+  For example, 'C-style\\*' -> 'elyts-C\\*'.
+  "
+  [string]
+  (def reverser
+    (fn [x]
+      (if (= "\\*" x) ""
+        (let [[xfirst & xrest] x]
+          (str (reverser (apply str xrest)) xfirst)))))
+  (str (reverser string) "\\*"))

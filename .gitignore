@@ -7,6 +7,7 @@
 .idea/
 .lein-failures
 .lein-repl-history
+.nrepl-port
 /.lein-*
 /.nrepl-port
 /checkouts

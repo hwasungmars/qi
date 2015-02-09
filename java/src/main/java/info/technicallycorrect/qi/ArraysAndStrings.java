@@ -10,4 +10,9 @@ public class ArraysAndStrings {
     return false;
   }
 
+  // Given a C-style string that terminates with \*, reverse it.
+  public static String reverse(final String input) {
+    return "";
+  }
+
 }
