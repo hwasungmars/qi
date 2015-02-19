@@ -12,9 +12,7 @@ public class ArraysAndStringsTest {
     @Test
     public void uniqueChars() {
        assertTrue(assertUniqueEquals("Hwasung"));
-       assertFalse(ArraysAndStrings.uniqueChars("Melanie"));
        assertFalse(assertUniqueEquals("Melanie"));
-       assertTrue(ArraysAndStrings.uniqueChars("Hwasung"));
     }
 
 
