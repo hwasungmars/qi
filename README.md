@@ -2,19 +2,8 @@
 
 # Quite Interesting
 
-Collection of Quite Interesting questions.
+Collection of Quite Interesting questions.  The programming language of choice is Clojure.
 
 ## Test
 
-To run all tests:
-
-`make test`
-
-To run only Java tests go to the `java` subfolder and do:
-
-`mvn test`
-
-To run only Clojure tests go to the `clojure` subfolder and do:
-
 `lein test`
-
