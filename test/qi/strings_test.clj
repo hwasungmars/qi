@@ -16,3 +16,7 @@
     (is (= "a\\*" (reverse-c "a\\*"))))
   (testing "Interesting cases."
     (is (= "C-style\\*" (reverse-c "elyts-C\\*")))))
+
+(deftest simple-compress-test
+  (testing "Given example"
+    (is (= "a2b1c5a3" (simple-compress "aabcccccaaa")))))

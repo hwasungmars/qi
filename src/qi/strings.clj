@@ -23,3 +23,16 @@
         (let [[xfirst & xrest] x]
           (str (reverser (apply str xrest)) xfirst)))))
   (str (reverser string) "\\*"))
+
+(defn simple-compress
+  "Implement a method to perform basic string compression using the counts of repeated chars.
+
+  Example: aabcccccaaa -> a2b1c5a3
+  "
+  [uncompressed]
+  (let [partitions (partition-by identity uncompressed)
+        ;; ([\a 2] [\b 1] [\c 5] [\a 3])
+        key-counts (map (fn [x] [(first x) (count x)]) partitions)
+        ;; ("a2" "b1" "c5" "a3")
+        string-seg (map #(apply str %) key-counts)]
+    (apply str string-seg)))
