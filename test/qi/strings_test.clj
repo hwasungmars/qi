@@ -20,3 +20,10 @@
 (deftest simple-compress-test
   (testing "Given example"
     (is (= "a2b1c5a3" (simple-compress "aabcccccaaa")))))
+
+(deftest rotation?-test
+  (testing "If they are not the same length, we should return false"
+    (is (= false (rotation? "blah" "blahblah"))))
+  (testing "If they are the same lenght, then we should do proper evaluation."
+    (is (= false (rotation? "blah" "abba")))
+    (is (= true (rotation? "abba" "bbaa")))))

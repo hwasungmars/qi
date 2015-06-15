@@ -36,3 +36,12 @@
         ;; ("a2" "b1" "c5" "a3")
         string-seg (map #(apply str %) key-counts)]
     (apply str string-seg)))
+
+(defn rotation?
+  "Given two strings check whether they are a rotation of the other using substring call."
+  [x y]
+  (if (not (= (count x) (count y)))
+    false
+    (let [double-x (str x x)
+          double-y (str y y)]
+      (and (.contains double-x y) (.contains double-y x)))))

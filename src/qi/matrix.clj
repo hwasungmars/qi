@@ -1,4 +1,5 @@
-(ns qi.matrix)
+(ns qi.matrix
+  (:require  [clojure.math.combinatorics :as combo]))
 
 (defn peel-layer
   "Given a matrix peel the outer layer and return it with the inner layer."
@@ -35,3 +36,32 @@
           rotated-layer (rotate-layer layer)]
       (add-layer rotated-layer (rotate-matrix kernel)))))
 
+(defn zero-rows
+  "Given a matrix and a index, zero that row."
+  [matrix index]
+  (let [dim (count matrix)
+        zero-row (into [] (repeat dim 0))]
+    (assoc matrix index zero-row)))
+
+(defn zero-columns
+  "Given a matrix and a index, zero that column."
+  [matrix index]
+  (map #(assoc % index 0) matrix))
+
+(defn zero-element?
+  "Given a matrix and a index, zero that row column if it is zero."
+  [matrix i j]
+  (let [elem (.get (.get matrix i) j)]
+    (zero? elem)))
+
+(defn zero-matrix-if
+  "Zeros the column and row if a element is zero in that column or row."
+  [matrix]
+  (let [dim (count matrix)
+        points (combo/cartesian-product (range dim) (range dim))
+        zero-elements (filter (fn [[i j]] (zero-element? matrix i j)) points)
+        [zero-row zero-column] (reduce (fn [[xset yset] [x y]] [(conj xset x) (conj yset y)])
+                                [#{} #{}]
+                                zero-elements)
+        rows-zeroed (reduce (fn [m i] (zero-rows m i)) matrix zero-row)]
+    (reduce (fn [m j] (zero-columns m j)) rows-zeroed zero-column)))
