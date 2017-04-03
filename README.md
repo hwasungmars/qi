@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/hwasungmars/qi.svg)](https://travis-ci.org/hwasungmars/qi)
+[![CircleCI](https://circleci.com/gh/hwasungmars/qi-clojure.svg?style=svg)](https://circleci.com/gh/hwasungmars/qi-clojure)
 
 # Quite Interesting
 

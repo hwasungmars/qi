@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/circulate
+    docker:
+      - image: clojure:latest
+    steps:
+      - checkout
+      - run: lein test
